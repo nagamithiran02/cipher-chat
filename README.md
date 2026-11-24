@@ -1,4 +1,4 @@
-```markdown
+
 # 🔐 CipherChat — Client-Side Private Message Encoder
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
@@ -55,4 +55,3 @@ git clone [https://github.com/nagamithiran02/cipher-chat.git](https://github.com
 
 ```
 
-```
