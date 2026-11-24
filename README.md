@@ -1,3 +1,4 @@
+Markdown
 # 🔐 CipherChat — Client-Side Private Message Encoder
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
@@ -28,3 +29,54 @@ cipher-chat/
 ├── index.html   # Semantic UI layout and input/output controls
 ├── style.css    # Dark-mode responsive interface styling
 └── script.js    # UTF-8 Base64 helpers, Caesar cipher logic, and DOM events
+💡 How It Works (Under the Hood)
+Encryption Pipeline: Applies modular alphabetic rotation (
+𝐸
+(
+𝑥
+)
+=
+(
+𝑥
++
+𝑘
+)
+mod
+26
+E(x)=(x+k)mod26) using the chosen shift key 
+𝑘
+k, then optionally wraps the UTF-8 byte stream in Base64 to obfuscate word lengths and special characters.
+
+Decryption Pipeline: Reverses the layers in strict LIFO order—decoding the Base64 payload back into UTF-8 text first (when enabled) before applying the inverse modular shift (
+𝐷
+(
+𝑥
+)
+=
+(
+𝑥
+−
+𝑘
++
+26
+)
+mod
+26
+D(x)=(x−k+26)mod26).
+
+Security Note: Designed as an educational cryptography and obfuscation utility; for high-security communications, pair with modern authenticated encryption (e.g., AES-GCM via the Web Crypto API).
+
+📦 Running Locally
+Clone or download the repository:
+
+Bash
+git clone [https://github.com/nagamithiran02/cipher-chat.git](https://github.com/nagamithiran02/cipher-chat.git)
+Open index.html directly in any modern web browser—no build tools or dependencies required.
+
+
+---
+
+### 4. Bonus Catch on Your `password-entropy-analyzer` Repo
+Notice in `image_7a3843.png` that your repo includes **`app.py`** alongside `main.py`, `analyzer.py`, `generator.py`, and `common_passwords.txt`[cite: 5]—if `app.py` is your Streamlit interface, you can optionally add `├── app.py # Streamlit web UI` into the `Project Structure` tree of that README too so it matches the repo 1:1[cite: 5].
+
+Once `cipher-chat` is live, let me know if you'd like to add it as a second featured card right next to **Password Entropy Analyzer** on your main profile `README.md`!
