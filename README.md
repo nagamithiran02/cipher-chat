@@ -53,5 +53,3 @@ git clone [https://github.com/nagamithiran02/cipher-chat.git](https://github.com
 2. **Decryption Pipeline:** Reverses the layers in strict LIFO order—decoding the Base64 payload back into UTF-8 text first (when enabled) before applying the inverse modular shift ($D(x) = (x - k + 26) \bmod 26$).
 3. **Security Note:** Built as an educational cryptography and text-obfuscation utility; for sensitive communications, use modern authenticated encryption such as AES-GCM via the Web Crypto API.
 
-```
-
